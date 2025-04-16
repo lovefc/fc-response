@@ -1,0 +1,27 @@
+{
+	"name": "fc-response",
+	"version": "0.0.1",
+	"description": "response工具",
+	"keywords": [
+		"http-response",
+		"response"
+	],
+	"homepage": "https://github.com/lovefc/fc-response",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lovefc/fc-response.git"
+	},
+	"author": {
+		"name": "lovefc",
+		"email": "fcphp@qq.com",
+		"url": "https://lovefc.cn"
+	},
+	"engines": {
+		"node": ">= 10.0.0"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"mime-types": "3.0.1"
+	}
+}
