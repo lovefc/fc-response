@@ -26,7 +26,7 @@ const _router = require('fc-route');
 const fc_response = require("fc-response");
 
 // 实例化工具类，并且设置静态目录中，默认的索引文件名称
-let _res = new fc_response({'defaultFiles':'index.html,index.htm'});
+let _res = new fc_response({ 'defaultFiles': 'index.html,index.htm' });
 
 let router = new _router();
 
@@ -36,37 +36,37 @@ router.get(function (req, res) {
 });
 
 //默认页面
-router.get('/index',async function (req, res) {
-    _res.send('hello world');
+router.get('/index', async function (req, res) {
+	_res.send('hello world');
 });
 
 // 输出json
-router.get('/json',async function (req, res) {
+router.get('/json', async function (req, res) {
 	_res.json({ message: 'Hello World', timestamp: Date.now() });
 });
 
 // 重定向
-router.get('/redirect',,async function (req, res) {
+router.get('/redirect',, async function (req, res) {
 	_res.redirect('https://blog.lovefc.cn');
 });
 
 // 下载文件
-router.get('/down',async function (req, res) {
+router.get('/down', async function (req, res) {
 	let path = './demo/1.jpg';
-	_res.download(path,'1.html');
+	_res.download(path, '1.html');
 });
 
 // 绑定目录，并且输出静态文件，这里还可以单独指定一个文件进行输出
-router.get('/demo/~d',async function (req, res) {
+router.get('/demo/~d', async function (req, res) {
 	let { d } = req.params;
-	_res.server('./demo',d);
+	_res.server('./demo', d);
 });
 
 // 输出一个图片
-router.get('/image',async function (req, res) {
+router.get('/image', async function (req, res) {
 	let { d } = req.params;
 	// 在demo下的一个图片文件
-	_res.server('./demo','1.jpg');
+	_res.server('./demo', '1.jpg');
 });
 
 router.http(server);
@@ -84,4 +84,4 @@ server.listen(3000, function () {
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2022-[lovefc](http://lovefc.cn)
+Copyright (c) 2025-[lovefc](http://lovefc.cn)
