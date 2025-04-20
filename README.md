@@ -26,17 +26,17 @@ const _router = require('fc-route');
 const fc_response = require("fc-response");
 
 // 实例化工具类，并且设置静态目录中，默认的索引文件名称
-let _res = new fc_response({ 'defaultFiles': 'index.html,index.htm' });
+let _res = new fc_response({ 'defaultFiles': 'index.html,index.htm', 'maxage':0 });
 
 let router = new _router();
 
 router.get(function (req, res) {
-	// 绑定res参数，以便接下来使用
-	_res.use(res);
+	// 绑定参数，以便接下来使用
+	_res.use(req, res);
 });
 
 //默认页面
-router.get('/index', async function (req, res) {
+router.get('/', async function (req, res) {
 	_res.send('hello world');
 });
 

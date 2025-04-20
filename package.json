@@ -1,6 +1,6 @@
 {
 	"name": "fc-response",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "response工具",
 	"keywords": [
 		"http-response",

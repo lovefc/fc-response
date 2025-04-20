@@ -6,6 +6,6 @@
  * @LastEditTime : 2025-04-16 11:14:56
  */
 
-const response = require('./lib/response.js');
+const response = require('./lib/Response.js');
 
 module.exports = response;
